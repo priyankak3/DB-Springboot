@@ -18,7 +18,7 @@ services:
       retries: 5
 
   app:
-    image: priyankak3/deutsche-springboot-demo:latest
+    image: priyanka16603/deutsche-springboot-demo:latest
     depends_on:
       - db
     ports:
