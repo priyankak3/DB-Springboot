@@ -16,6 +16,7 @@ import java.util.List;
 @RequestMapping("/emp")
 public class EmployeeController {
 
+    //For logging
     private static final Logger LOG = LoggerFactory.getLogger(EmployeeController.class);
 
     @Autowired
