@@ -5,10 +5,9 @@ import com.deutsche.demo.exception.EmployeeNotFoundException;
 import com.deutsche.demo.model.Employee;
 import com.deutsche.demo.repository.EmployeeRepository;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.web.servlet.MockMvc;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -23,15 +22,9 @@ import static org.mockito.BDDMockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-//@ExtendWith(MockitoExtension.class)
-@SpringBootTest
-class EmployeeServiceTest {
+@ExtendWith(MockitoExtension.class)
+public class EmployeeServiceTest {
 
-    @Autowired
-    private MockMvc mockMvc;
-
-//    @MockBean
-//    private EmployeeService empService;
     @Mock
     private EmployeeRepository empRepository;
 
